@@ -5,7 +5,7 @@ class BrowserDriver:
     def quit(self):
         print("quiting browser")
 
-class BaseTest:
+class BasicConfig:
     def __init__(self):
         self.driver = BrowserDriver()
     def setUp(self):
@@ -13,10 +13,10 @@ class BaseTest:
     def tearDown(self):
         self.driver.quit()
 
-class Login(BaseTest):
+class Login(BasicConfig):
     def run_test(self):
         print("running login test")
-class Logout(BaseTest):
+class Logout(BasicConfig):
     def run_test(self):
         print("running logout test")
 
