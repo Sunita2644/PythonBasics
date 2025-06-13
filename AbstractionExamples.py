@@ -13,7 +13,7 @@ class SearchScript(AutomationScript):
         print("Search Test is running")
 
 signup = SignUpScript()
-signup.execute()
-
 searchScript = SearchScript()
-searchScript.execute()
+ObjectList = [signup,searchScript]
+for object in ObjectList:
+    object.execute()
